@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行时数据（含订阅令牌、节点库、日志）——绝不入库
+data/
+
+# WorkBuddy 工作记录
+.workbuddy/
+
+# 日志与数据库
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# 本地订阅/令牌文件
+*.token
+tokens.json
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 测试缓存
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,50 @@
+# ============================================================
+# 节点源配置
+#
+# 重要：下面的地址是逐个核实过的真实路径（含默认分支名）。
+#      它们的可用性取决于仓库作者当时的维护状态，随时可能失效 ——
+#      这是免费节点的常态，不是工具的 bug。失效的源会在面板
+#      「源健康度」里显示红色，届时换源或把 priority 调大排到后面即可。
+#
+# 修改后重启服务生效。已入库的源不会被覆盖；要彻底去掉某个源，
+# 请在面板里把它关闭，或用 API 删除。
+#
+# 支持格式（自动识别，无需指定）：
+#   - Clash / mihomo 的 YAML（含 proxies 段）
+#   - base64 编码的 v2ray 分享链接列表
+#   - 明文分享链接列表（一行一条）
+# ============================================================
+
+sources:
+  # 上游真实测活后产物，命中率最高，优先放前面
+  - name: ermaozi-测活节点
+    url: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/reachable/v2ray.txt
+    enabled: true
+    priority: 10
+
+  - name: ermaozi-clash合集
+    url: https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
+    enabled: true
+    priority: 20
+
+  - name: Pawdroid
+    url: https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+    enabled: true
+    priority: 30
+
+  - name: NoMoreWalls
+    url: https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+    enabled: true
+    priority: 40
+
+  - name: ripaojiedian
+    url: https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
+    enabled: true
+    priority: 50
+
+  # 这个源节点量很大（近 3000 条），默认开启但优先级最低。
+  # 首轮采集会比较慢，测速由 probe_limit 控制单轮上限。
+  - name: FreeNodes-merged
+    url: https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/merged.yaml
+    enabled: true
+    priority: 60
