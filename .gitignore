@@ -23,6 +23,9 @@ data/
 *.token
 tokens.json
 
+# Windows 快捷方式（桌面图标副本，不入仓库）
+*.lnk
+
 # 编辑器 / 系统
 .vscode/
 .idea/
